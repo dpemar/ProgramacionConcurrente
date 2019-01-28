@@ -6,13 +6,13 @@ import java.util.Random;
 public class Comparador {
 
 	public static void main(String[] args) {
-		
+
 		List<Integer> a = new ArrayList<>();
-		
+
 		for (int i = 0; i < 100; i++) {
 			a.add(new Random().nextInt(100));
 		}
-		
+
 		a.sort(new Comparator<Integer>() {
 
 			@Override
@@ -20,8 +20,8 @@ public class Comparador {
 				return o1 - o2;
 			}
 		});
-		
-		a.sort((o1,o2) -> o1 - o2);
-		
+
+		a.sort((o1, o2) -> o1 - o2);
+
 	}
 }
