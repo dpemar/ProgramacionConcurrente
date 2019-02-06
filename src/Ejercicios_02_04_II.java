@@ -3,6 +3,7 @@ import java.util.Random;
 public class Ejercicios_02_04_II {
 	
 	// Cliente servidor
+	
 	// Diferencia con el anterior es que el cliente le dice al servidor cuando le tiene que servir
 	
 	private static boolean peticion;
