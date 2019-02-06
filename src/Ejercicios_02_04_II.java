@@ -1,21 +1,10 @@
-/**
- * 
- */
-
-
 import java.util.Random;
 
-/**
- * @author Ivan.Perez
- *
- *  https://github.com/IvanPerez9
- */
-
-public class ClienteServidor {
+public class Ejercicios_02_04_II {
 	
-	/*
-	 * Diferencia con el anterior es que el cliente le dice al servidor cuando le tiene que servir
-	 */
+	// Cliente servidor
+	// Diferencia con el anterior es que el cliente le dice al servidor cuando le tiene que servir
+	
 	private static boolean peticion;
 	private static boolean realizada;
 	private static volatile int product;
@@ -56,7 +45,7 @@ public class ClienteServidor {
 	/*
 	 * 	Variable nueva booleana que dice si hay peticion o no
 	 *  Cliente pone peticion a true, se duerme y esperar hasta que este "realizada" otra boole
-	 *  Con una peticion el servidor marca al final que ya no hay más peticiones
+	 *  Con una peticion el servidor marca al final que ya no hay mï¿½s peticiones
 	 *  Servidor peticion a false
 	 */
 	

@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Ejercicios_02_04 {
+public class Ejercicios_02_04_I {
 
 	// ProductoConsumidor
 
@@ -17,12 +17,12 @@ public class Ejercicios_02_04 {
 	 */
 
 	public static void productor() {
-		
+
 		while (true) {
 			while (produced) {
 				sleep(1000);
 			}
-			
+
 			product = new Random().nextInt(100);
 			System.out.println("He producido " + product);
 			sleep(1000);
@@ -31,12 +31,12 @@ public class Ejercicios_02_04 {
 	}
 
 	public static void consumidor() {
-		
+
 		while (true) {
 			while (!produced) {
 				sleep(1000);
 			}
-			
+
 			System.out.println("El productor es " + product);
 			product = -1;
 			produced = false;
@@ -44,7 +44,7 @@ public class Ejercicios_02_04 {
 	}
 
 	private static void sleep(int bound) {
-		
+
 		try {
 			Thread.sleep(bound);
 		} catch (InterruptedException e) {
@@ -53,7 +53,7 @@ public class Ejercicios_02_04 {
 	}
 
 	public static void main(String[] args) {
-		
+
 		new Thread(() -> productor()).start();
 		new Thread(() -> consumidor()).start();
 	}
